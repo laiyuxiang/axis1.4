@@ -1,0 +1,17 @@
+1.首先下载axis-1.4所有的jar包，
+2.我是直接打开cmd，进入到该jar包的目录下，
+3.直接运行命令（运行这个命令之前要确定Java的环境变量都已配置好）：
+
+java -Djava.ext.dirs=${lib的目录} org.apache.axis.wsdl.WSDL2Java -o${代码输出路径}  -p${package名} ${wsdl的路径（可以是绝对路径或者url）}
+
+
+如：E:\wsdl\axis1.4\lib>java -Djava.ext.dirs=E:\wsdl\axis1.4\lib org.apache.axis.wsdl.WSDL2Java -osrc -pcom.test.server.client E:\wsdl\archivesV2.wsdl
+
+1.lib文件放在目录：E:\javaFrame\axis2-1.4.1-bin\axis-1.4\axis-1.4\axis-1.4-all-bin\axis-1.4   
+
+2.src是当前目录（E:\javaFrame\axis2-1.4.1-bin\axis-1.4）下的文件夹
+
+
+3.结果输出在src文件夹中（-o可以不要，默认当前目录）
+
+4.com.test.server.client 是生成客户端代码的package名
